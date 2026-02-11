@@ -1,0 +1,24 @@
+{
+	"$schema": "node_modules/wrangler/config-schema.json",
+	"name": "kommo-messages-workflow",
+	"main": "src/index.js",
+	"account_id": "1508704f5d75f18788bd39d2012001d5",
+	"compatibility_date": "2026-01-03",
+	"observability": {
+		"enabled": true
+	},
+	"workflows": [
+		{
+			"name": "workflow-kommo-messages",
+			"binding": "MY_WORKFLOW",
+			"class_name": "MyWorkflow"
+		}
+	],
+	"d1_databases": [
+		{
+			"binding": "DB",
+			"database_name": "kommo",
+			"database_id": "ebb95c49-5f0c-4fd1-b112-19e8cb433098"
+		}
+	]
+}
