@@ -12,7 +12,7 @@ export async function sendMessageToLaburenAgent(account_config, normalized, conv
       },
       signal: controller.signal,
       body: JSON.stringify({
-        conversationId,
+        ...(conversationId != null && { conversationId }),
         query: normalized.text || "",
         context: `lead_name: ${normalized.author_name || ""}
         \nlead_id: ${normalized.element_id || ""}

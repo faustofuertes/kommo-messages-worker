@@ -18,7 +18,7 @@ export class MyWorkflow extends WorkflowEntrypoint {
 
     await step.do("laburen-step", async () => {
 
-      if (conversationId) {
+      if (conversationId != null) {
         console.log(`⏯️ [${account_config.kommo_account_subdomain}] Reanudando conversación [${conversationId}] para lead [${normalized.element_id}].`);
 
         data = await sendMessageToLaburenAgent(account_config, normalized, conversationId);
